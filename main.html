@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food blog</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <style>
+       html{
+        overflow-x: hidden;
+      }
+      * { margin: 0; padding: 0 }
+      #header{
+            margin: -10px;
+            top: 0px;
+            left: 0px;
+            width: 102%;
+            margin-bottom:-12px;
+background-color:black;
+color:white;
+padding:10px;}
+
+
+#footer{
+            bottom: 0px;
+            left: 0px;
+            width: 102%;
+            text-align:center;
+            background-color:black;
+            color:white;
+            padding: 0%;
+        }
+
+body{
+    overflow-x: hidden;
+}
+
+      ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+            padding-bottom: 0.25px;
+            z-index: 1;  
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.bgimg {
+    background-image: url('https://wallpaperaccess.com/full/364188.jpg');
+    background-attachment: scroll;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+
+.post{
+ margin-left: 5px;
+}
+
+.aboutimg {
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/yellow-light-sparkles-merrymoonmary.jpg');
+    background-attachment: scroll;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+
+
+.intro {
+  position: relative;
+  width: 50px;
+  padding: 10px;
+  align-content: center;
+  display:inline-block;
+    margin: auto;
+            top: 0px;
+            left: 0px;
+            width: 56%;
+}
+
+.imageintro { /*use Camel case always*/
+  opacity: 1;
+  display: block;
+  height: auto;
+  margin: auto;
+  top: 0px;
+            left: 0px;
+            width: 58.5%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middleintro {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intror:hover .imageintro {
+  opacity: 0.3;
+}
+
+.intro:hover .middleintro {
+  opacity: 1;
+}
+
+.textintro {
+  background-color: #f8b967;
+  color: white;
+  font-size: 14px;
+  padding: 10px 28px;
+}
+
+#sec1{
+    display: inline-block;
+    border: 5px solid maroon;
+    border-radius: 30px;
+    margin: auto;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            text-align: center;
+  background-color: whitesmoke;
+            color:black;
+            font-weight: bold;
+            font-size: 15px;
+            padding:20px;
+            position: relative;
+            opacity: 0.6;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    position: relative;
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.image1 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+  margin-left: 5px;
+  margin-right:1px;
+}
+
+.image2 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+  margin-left:1px;
+  margin-right:1px;
+}
+.image3 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+.image4 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+.middle1 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle2 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle3 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle4 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.column:hover .image1 {
+  opacity: 0.3;
+}
+.column:hover .image2 {
+  opacity: 0.3;
+}
+.column:hover .image3 {
+  opacity: 0.3;
+}
+.column:hover .image4 {
+  opacity: 0.3;
+}
+
+.column:hover .middle1 {
+  opacity: 1;
+}
+
+.column:hover .middle2 {
+  opacity: 1;
+}
+.column:hover .middle3 {
+  opacity: 1;
+}
+.column:hover .middle4 {
+  opacity: 1;
+}
+
+
+.text1 {
+  background-color: #81c8dd;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.text2 {
+  background-color: #81c8dd;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.text3 {
+  background-color: #81c8dd;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.text4 {
+  background-color: #81c8dd;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.newsletter {
+  padding: 10px;
+  background-color: #64636333;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(194, 181, 181);
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+#letters{
+    margin-right: 15px;
+}
+
+a.insta{position: relative;}
+a.fb{position: relative;}
+a.twitter{position: relative;}
+a.yt{position: relative;}
+a.linkedin{position: relative;}
+a.share{position:relative;}
+
+
+a.insta:hover, a.insta:active{font-size: 110%; padding: 1px 2px; }
+a.fb:hover, a.fb:active{font-size: 110%; padding: 1px 2px;}
+a.twitter:hover, a.twitter:active{font-size: 110%; padding: 1px 2px;}
+a.yt:hover, a.yt:active{font-size: 120%; padding: 1px 2px;}
+a.linkedin:hover, a.linkedin:active{font-size: 110%; padding: 1px 2px;}
+a.share:hover, a.share:active{font-size: 110%; padding: 1px 2px;}
+
+.row1 {
+  display: flex;
+  border: 3.5px solid black;
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;
+border: 3px solid black;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+  animation-iteration-count: infinite ;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #896cd8;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#btn-back-to-top {
+  position: absolute;
+  position: fixed;
+  visibility: visible;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+.card{
+border: 2px solid black;
+}
+
+/* .card-footer{
+    border: 1px solid black; 
+    width: 100%;
+} */
+    </style>
+</head>
+<body>
+<!-- Header Menu of the Page -->
+    <div id="header"><h2><img src="https://images.assetsdelivery.com/compings_v2/sergeypykhonin/sergeypykhonin1806/sergeypykhonin180600076.jpg" alt="" height="105.5px" width="150px"><em>  Welcome! Let's Binge on Food Together! </em> </h2></div>
+    <!-- Navigation Menu -->
+    <nav >
+        <ul >
+            <li><a  href="#">Home</a></li>
+            <li><a  href="#">About</a></li>
+            <li><a  href="">Recipes</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a  href="">Contact</a></li>
+            <li><a  href="">FAQ</a></li>
+          </ul>
+          
+        </nav>
+        <div class="aboutimg" align="center">
+            <font face = "Comic sans MS" size ="6" color = "black"> Hi there!</font><br>
+            <font face = "Comic sans MS" size ="5" color = "black">Welcome to Food Blog <i class="bi bi-emoji-smile" style="font-size: 25px; color: red;"></i></font><br></nav>
+        
+        
+        <div align="center" class="intro">
+          <img src="https://i.pinimg.com/736x/03/5d/c2/035dc202c78257b2a96cd1ab35bb8a55.jpg" alt="introduction" class="imageintro" >
+          <div class="middleintro">
+            <div class="textintro">
+           <h3>FOODLOVER'S SPACE</h3>
+            A PLATFORM TO SHARE VARIETIES OF FOOD INTERNATIONALLY <BR>
+                LET'S SPREAD LOVE FOR FOOD !
+          </div>
+          </div>
+        </div>
+        <br>
+        <article>
+            <div id="sec1"><article><section>
+            <p> Are you a food lover? Here is the best blog for any Food Lover.
+                <br><br>
+                Someone has rightly said, ‘There is no Sincere love than the love of food.’ Food lovers are everyone and everywhere. They are always in search of something exquisite and which can match their taste buds. Different restaurant is always serving the clients the dishes which taste delicious and fresh.  In this blog, we are going to talk about different cruises internationally ..</p>
+           </section>
+            </article></div>
+            <br><br>
+        
+            </article>
+            </div>
+  <!-- Back to top button -->
+<button
+type="button"
+class="btn btn-danger btn-floating btn-lg"
+id="btn-back-to-top">
+<i class="bi bi-arrow-up-circle"></i>
+</button>
+<script>//Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+    
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+    
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }</script>
+
+<div class="bgimg">
+    <br>
+    <marquee direction="left">Welcome, this is my first blog on food.</marquee>
+    <br>
+    <marquee direction="right" >For more updates ,subscribe to my blog </marquee>
+  <!-- grid with bootstrap -->
+    <div class="row">
+        <div class="col-md bg-warning"><b><center>Thai</center></b></div>
+        <div class="col-md bg-danger"><b><center>Spanish</center></b></div>
+        <div class="col-md bg-success"><b><center>Indonesian</center></b></div>
+        <div class="col-md bg-info"><b><center>Italian</center></b></div>
+        <div class="col-md bg-warning"><b><center>Chinese</center></b></div>
+        <div class="col-md bg-danger"><b><center>Japanese</center></b></div>
+        <div class="col-md bg-success"><b><center>Turkish</center></b></div>
+        <div class="col-md bg-info"><b><center>French</center></b></div>
+    </div>
+    <hr>
+    <article class="post">
+        <h3><i><b> ~THAI~ </b></i></h3>
+        <small>Posted by Brad on June 12</small>
+        <p>Thai is one of my absolute favorite; you can never go wrong with it! I do advise if you have a peanut or coconut allergy, double check the ingredients before ordering anything. <br><br> <b>Traditional Thai Food Recipes:</b> The cuisine of Thailand works effortlessly to lure food lovers into its aromatic spell. Its rich and creamy curries, fragrant sauces, flavourful snacks and sinful sweets are bound to make you go back to indulging in them time and again. The key to cooking any Thai dish lies in perfectly balancing the five key flavours - sour, bitter, salty, sweet and spicy, which takes skills to master. Each Thai dish is therefore never dull, always bringing in the much needed punch to your palate.</p>
+        
+        <center> <img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/3p-500x500.jpg" alt="this is Thai food" width="350px" height="350px"></center>
+       <br>
+        <p>Thai food has been influenced by other Southeast Asian cuisines such as Indian and Chinese, but it still manages to be completely different from them. Originally, Thai cuisine used to be a lot spicier than it is today, but over time, the hot elements were reduced and other flavour boosters like lemon grass and galangal were introduced to the cuisine. One also commonly gets to see the use of minced or sliced meat in the dishes. Some of the popular Thai dishes include Thai curries, Som Tam Salad, Tom Yum Soup, Pad Thai noodles, Satay, among others.</p>
+        <center><h5><U> <b>POPULAR DISHES</b> </U></h5></center>
+        <div class="row" >
+            <div class="column">
+              <img src="https://i.ndtvimg.com/i/2016-03/chicken-satay-625_625x350_71459233967.jpg" alt="Chicken Satay" class="image1" style="width:100%"> 
+              <div class="middle1">
+                <div class="text1">Chicken Satay</div>
+              </div></div><br>
+            
+            
+            <div class="column">
+              <img src="https://i.ndtvimg.com/i/2016-06/pad-thai_625x350_51466745673.jpg" alt="Pad Thai" class="image2"style="width:100%">
+              <div class="middle2">
+                <div class="text2">Pad Thai</div>
+              </div></div><br>
+           
+            <div class="column">
+                <img src="https://c.ndtvimg.com/2018-11/ieb2n7p8_thai-green-curry_625x300_23_November_18.PNG" alt="Thai Green Chicken Curry" class="image3" style="width:100%" >
+                <div class="middle3">
+                    <div class="text3">Thai Green Chicken Curry</div>
+                  </div></div>
+            
+            <div class="column">
+              <img src="https://i.ndtvimg.com/i/2015-09/raw-papaya-salad_600x350_81441181611.jpg" alt="Som Tam (Papaya Salad)" class="image4"  style="width:100%">
+              <div class="middle4">
+                <div class="text4">Som Tam (Papaya Salad)</div>
+              </div></div><br>
+            
+          </div>
+        </article>
+        <hr>
+        <article class="post">
+        <h3><i> <b> ~SPANISH~ </b></i></h3>
+        <small>Posted by John on June 12</small>
+        <p>There is no true Spanish cuisine but rather composed of many distinct regional cuisines. Either way, it’s AHH-MAAAAZING! <br>Spain is famous as one of the best food and wine destinations in the World. That being said, traveling to Spain meant for me getting familiar with the food culture of Spain: eating traditional Spanish food, sampling traditional dishes from Spain, and drinking typical Spanish drinks. Local food in Spain and local cuisine in Spain were on my list of things to do in Spain.</p>
+        <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/4p-500x500.jpg" alt="this is Spanish food" width="350px" height="350px"></center>
+        <br>
+        <p>Spanish cuisine is probably best known for various Spanish tapas (cold or hot Spanish appetizers or snacks) including world-famous national foods of Spain like iconic jamon iberico, legendary paella, and glorified gazpacho. But actually, there’s an impressive number of gastronomic delicacies of Spain and only a comprehensive culinary encyclopedia would do full justice to Spanish cuisine.
+
+            However, here’s a Spain food list covering authentic Spanish food, typical food from Spain, traditional food in Spain, famous foods in Spain, famous Spanish tapas dishes, best Spanish dishes, typical dishes of Spain, the most popular dishes of Spain, and popular Spanish drinks.</p>
+            <center><h5><U> <b>POPULAR DISHES</b> </U></h5></center>
+            <div class="row" >
+                <div class="column">
+                  <img src="https://www.worldtravelconnector.com/wp-content/uploads/2019/06/Popular-food-in-Spain_Seafood-Paella.jpg" alt="PAELLA – Spanish rice dish" class="image1" style="width:100%"> 
+                  <div class="middle1">
+                    <div class="text1">PAELLA – Spanish rice dish</div>
+                  </div></div><br>
+                
+                
+                <div class="column">
+                  <img src="https://www.worldtravelconnector.com/wp-content/uploads/2019/06/Popular-food-in-Spain_Gazpacho-in-Spain.jpg" alt="GAZPACHO – Spanish tomato soup" class="image2"style="width:100%">
+                  <div class="middle2">
+                    <div class="text2">GAZPACHO – Spanish tomato soup</div>
+                  </div></div><br>
+               
+                <div class="column">
+                    <img src="https://www.worldtravelconnector.com/wp-content/uploads/2019/06/Popular-food-in-Spain_Spanish-tortilla.jpg" alt="TORTILLA ESPANOLA – Spanish omelette" class="image3" style="width:100%" >
+                    <div class="middle3">
+                        <div class="text3">TORTILLA ESPANOLA – Spanish omelette</div>
+                      </div></div>
+                
+                <div class="column">
+                  <img src="https://www.worldtravelconnector.com/wp-content/uploads/2019/06/Popular-food-in-Spain_croquettes-.jpg" alt="CROQUETAS – Spanish croquettes" class="image4"  style="width:100%">
+                  <div class="middle4">
+                    <div class="text4">CROQUETAS – Spanish croquettes</div>
+                  </div></div><br>
+                
+              </div>
+        </article><hr>
+        <article class="post">
+            <h3><i><b> ~INDONESIAN~ </b></i></h3>
+            <small>Posted by Vicky on Nov 13</small>
+            <p>Indonesian cuisine varies greatly by region and has many different influences. The food is usually chili hot and complexly seasoned with aromatic herbs and spices. “Bland” does not exist in their vocabulary. <br>Indonesia consists of 17,000 islands full of different flavors and tastes. Food in Indonesia is a mix of local biodiversity and centuries of influences by the traders from India, the Middle East, and East Asia.</p>
+           <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/1p-500x500.jpg" alt="this is Indonesian food" width="350px" height="350px"></center> <br>
+       
+       <p>Indonesians have unconditional love for rice and it’s the most common staple food across the islands. But as you move east, to Sulawesi, Makassar, Maluku, and Papua you will see taro, sweet potato, or cassava more often. Quite common these days are also instant noodles and even the restaurants have them on the menu.
+<br>
+        In the parts of the archipelago where Islam is the strongest – like Sumatra, especially Aceh, pork will never be in use. Bali, the Hindu Island, might be avoiding beef. As you move between islands you will notice all the differences in traditions and eating habits.</p>
+        <center><h5><U> <b>POPULAR DISHES</b> </U></h5></center>
+           <div class="row" >
+            <div class="column">
+              <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1024,h_594,c_scale/v1622207093/Indonesian-Food-Gado-Gado/Indonesian-Food-Gado-Gado-1024x594.jpg" alt="Sate" class="image1" style="width:100%"> 
+              <div class="middle1">
+                <div class="text1">Sate</div>
+              </div></div><br>
+            
+            
+            <div class="column">
+              <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1024,h_594,c_scale/v1622207098/Indonesian-Food-Ikan-Bakar/Indonesian-Food-Ikan-Bakar-1024x594.jpg" alt="Gado – Gado" class="image2"style="width:100%">
+              <div class="middle2">
+                <div class="text2">Gado – Gado</div>
+              </div></div><br>
+           
+            <div class="column">
+                <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1024,h_594,c_scale/v1622207116/Indonesian-Food-Pepes-Ikan/Indonesian-Food-Pepes-Ikan-1024x594.jpg" alt="Ikan Bakar" class="image3" style="width:100%" >
+                <div class="middle3">
+                    <div class="text3">Ikan Bakar</div>
+                  </div></div>
+            
+            <div class="column">
+              <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1024,h_594,c_scale/v1622207083/Indonesian-Food-Ayam-Goreng/Indonesian-Food-Ayam-Goreng-1024x594.jpg" alt="Tempeh" class="image4"  style="width:100%">
+              <div class="middle4">
+                <div class="text4">Tempeh</div>
+              </div></div><br>
+            
+          </div>
+        </article>  <hr>
+        <article class="post">
+                <h3><i><b> ~ITALIAN~ </b></i></h3>
+                <small>Posted by Sam on Dec 3</small>
+                <p>Italian cuisine is characterized by its extreme simplicity, with many dishes having only four to eight ingredients.Italian chefs mainly rely on the quality of the ingredients rather than on elaborate preparation.</p>
+               <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/8p-500x500.jpg" alt="this is Italian food" width="350px" height="350px"></center> 
+               <br>
+            <p>Fresh, flavorful, and delightfully simple, the sun-kissed Italian cuisine is dolce vita on the plate. But, for finding the best food in a country with such fabulous regional gastronomies, the best advice would be to forget about restaurants that serve “creative, innovative” fare, and just stick to the local, time-honored specialties.
+<br>
+                Eating is one of the greatest joys of traveling in Italy, a vivid insight into each region’s culture and traditions. Their dishes are made with seasonal, unpretentious ingredients, yet they taste like something you’d get in a Michelin-starred restaurant.</p>
+                <center><h5><U> <b>POPULAR DISHES</b> </U></h5></center>
+               <div class="row" >
+                <div class="column">
+                  <img src="https://mldvwwasb8tu.i.optimole.com/5CC9Lzs.tb2a~61eeb/w:948/h:632/q:90/https://travelaway.me/wp-content/uploads/2016/06/lasagna-bolognese.jpg" alt="Lasagna (Bologna)" class="image1" style="width:100%"> 
+                  <div class="middle1">
+                    <div class="text1">Lasagna (Bologna)</div>
+                  </div></div><br>
+                
+                
+                <div class="column">
+                  <img src="https://mldvwwasb8tu.i.optimole.com/5CC9Lzs.tb2a~61eeb/w:948/h:632/q:90/https://travelaway.me/wp-content/uploads/2016/06/ossobuco-alla-milanese.jpg" alt="Ossobuco alla Milanese (Milan)" class="image2"style="width:100%">
+                  <div class="middle2">
+                    <div class="text2">Ossobuco alla Milanese (Milan)</div>
+                  </div></div><br>
+               
+                <div class="column">
+                    <img src="https://mldvwwasb8tu.i.optimole.com/5CC9Lzs.tb2a~61eeb/w:948/h:633/q:90/https://travelaway.me/wp-content/uploads/2016/06/italian-gelato.jpg" alt="Gelato (all over Italy)" class="image3" style="width:100%" >
+                    <div class="middle3">
+                        <div class="text3">Gelato (all over Italy)</div>
+                      </div></div>
+                
+                <div class="column">
+                  <img src="https://mldvwwasb8tu.i.optimole.com/5CC9Lzs.tb2a~61eeb/w:948/h:632/q:90/https://travelaway.me/wp-content/uploads/2016/06/panzanella-salad.jpg" alt="Panzanella (Tuscany)" class="image4"  style="width:100%">
+                  <div class="middle4">
+                    <div class="text4">Panzanella (Tuscany)</div>
+                  </div></div><br>
+                
+              </div>
+          
+            </article>  <hr>
+        <article class="post">
+                    <h3><i><b> ~CHINESE~ </b></i></h3>
+                    <small>Posted by Jenny on Sept 4</small>
+                    <p>And of course, save the best for the last!! “The outside world defines as Chinese cuisine as not a true cuisine but rather a composite of distinct regional cuisines.” – Howard Hillman. <br>With a long history, unique features, numerous styles and exquisite cooking, Chinese cuisine is one important constituent part of Chinese culture. Chinese traditional dishes are famous for color, aroma, taste, meaning and appearance.</p>
+                   <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/10p-500x500.jpg" alt="this is Chinese food" width="350px" height="350px"></center> <br>
+                   <p>Chinese cuisine is rich and diverse, varying in style and taste from region to region. Its history dates back thousands of years, evolving according to changes in both the environment (such as climate) and local preferences over time. Chinese cuisine also varies depending on class and ethnic background, and it is often influenced by the cuisines of other cultures. All these factors contribute to an unparalleled range of cooking techniques, ingredients, dishes and eating styles that make up what is understood to be Chinese food today.</p>
+                   <center><h5><U><b>POPULAR DISHES</b></U></h5></center>
+                   <div class="row" >
+                    <div class="column">
+                      <img src="https://images.chinahighlights.com/allpicture/2018/07/f9d5a0141f06492d8db382ec_cut_1200x750_82.webp" alt="Guangdong/Cantonese Cuisine" class="image1" style="width:100%"> 
+                      <div class="middle1">
+                        <div class="text1">Guangdong/Cantonese Cuisine</div>
+                      </div></div><br>
+                    
+                    <div class="column">
+                      <img src="https://images.chinahighlights.com/allpicture/2018/08/5f0923ed3b744e578af2f7fc_cut_1200x750_82.webp" alt="Jiangsu Cuisine" class="image2"style="width:100%">
+                      <div class="middle2">
+                        <div class="text2">Jiangsu Cuisinei</div>
+                      </div></div><br>
+                   
+                    <div class="column">
+                        <img src="https://images.chinahighlights.com/allpicture/2015/02/d01a32aacab54a5584759f02_cut_1200x750_82.webp" alt="Hunan Cuisine" class="image3" style="width:100%" >
+                        <div class="middle3">
+                            <div class="text3">Hunan Cuisine</div>
+                          </div></div>
+                    
+                    <div class="column">
+                      <img src="https://images.chinahighlights.com/allpicture/2019/11/fd729ddd3fdf4fd9beefc79e_894x594.webp" alt="Shrimp with Vermicelli and Garlic" class="image4"  style="width:100%">
+                      <div class="middle4">
+                        <div class="text4">Shrimp with Vermicelli and Garlic</div>
+                      </div></div><br>
+                    
+                  </div>
+                </article>  <hr>
+                    <article class="post">
+                        <h3><i><b> ~JAPANESE~ </b></i></h3>
+                        <small>Posted by Jade on Feb 13</small>
+                        <p>“Though more complex cuisines exist, none comes close to matchingJapan’s culinary aesthetics.”- Howard Hillman <br>Japanese cuisine (和食, washoku) offers an abundance of gastronomical delights with a boundless variety of regional and seasonal dishes. Restaurants in Japan range from mobile food stands to centuries old ryotei, atmospheric drinking places, seasonally erected terraces over rivers, cheap chain shops and unique theme restaurants about ninja and robots. Many restaurants are specialized in a single type of dish, while others offer a variety of dishes. </p>
+                       <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/6p-500x500.jpg" alt="this is Japanese food" width="350px" height="350px"></center><br>
+                       <p>Japanese cuisine is sublime in its intricacy of flavour, its variety of seasonal dishes, and its surprising health benefits. A typical Japanese meal is based on combining staples; rice or noodles are almost always served with soup, pickles and at least one okazu side dish of fish, meat vegetable or tofu.
+<br>
+                        Being an island nation, the Japanese diet is heavily influenced by seafood and offers great variety through the use of seasonal ingredients. Always artfully presented, a product of centuries of history, Japanese cuisine is a feast for the eyes as well as the stomach</p>
+                        <center><h5><U> <b>POPULAR DISHES</b> </U></h5></center>
+                       <div class="row" >
+                        <div class="column">
+                          <img src="https://a.cdn-hotels.com/gdcs/production38/d170/3073d638-c201-477a-b5fd-800417567765.jpg" alt="Teishoku - a set meal" class="image1" style="width:100%"> 
+                          <div class="middle1">
+                            <div class="text1">Teishoku - a set meal</div>
+                          </div></div><br>
+                        
+                        
+                        <div class="column">
+                          <img src="https://a.cdn-hotels.com/gdcs/production142/d1428/21bf55a6-0124-475b-b3a4-d338651b0dec.jpg" alt="Tempura" class="image2"style="width:100%">
+                          <div class="middle2">
+                            <div class="text2">Tempura</div>
+                          </div></div><br>
+                       
+                        <div class="column">
+                            <img src="https://a.cdn-hotels.com/gdcs/production122/d1480/a2c0c3e3-82e1-4e5c-8a66-94b37a8daf1c.jpg" alt="
+                            Noodles: soba, udon and ramen" class="image3" style="width:100%" >
+                            <div class="middle3">
+                                <div class="text3">
+                                    Noodles: soba, udon and ramen</div>
+                              </div></div>
+                        
+                        <div class="column">
+                          <img src="https://a.cdn-hotels.com/gdcs/production139/d788/1e28039e-65d5-4bbb-8e18-4be9b40ba487.jpg" alt="Sushi" class="image4"  style="width:100%">
+                          <div class="middle4">
+                            <div class="text4">Sushi</div>
+                          </div></div><br>
+                        
+                      </div>
+                        </article>  <hr>
+                        <article class="post">
+                            <h3><i><b> ~TURKISH~ </b></i></h3>
+                            <small>Posted by Becky on June 17</small>
+                            <p>“Turkish cuisine is a Middle Eastern culinary marriage – and the nation has some of the most dedicated and talented cooks on earth.” -Howard Hillman <br>Turkish cuisine is one of the world’s top cuisines, joining the ranks of French, Chinese, Italian, and the like. Like the country’s cultural mosaic, the food of Turkey is very colorful and contains countless different influences and tastes. The cuisine of Turkey has continued to evolve over centuries, deriving influence from its rich history of lands that hosted first the Byzantine, and then the Ottoman Empires. </p>
+                           <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/2p-500x494.jpg" alt="this is Turkish food" width="350px" height="350px"></center><br> 
+<p>Specific tastes in different regions of Turkey contribute to the complexity of the country’s cuisine. The availability of different Turkish food in some regions also helped to shape the foods common to that particular area. The Eastern Black Sea region, for example, is not appropriate for wheat production due to heavy rainfall; therefore the residents developed dishes that rely mostly on corn and cornflour. Likewise, the Southeastern Anatolian region is famous for kebabs as a result of its abundant livestock. The Aegean region, known for its olive production, is famous for its delicious olive oil vegetable dishes and herbs; while pastries are the monopoly of Thrace.</p>
+<center><h5><U><b> POPULAR DISHES</b> </U></h5></center>
+                           <div class="row" >
+                            <div class="column">
+                              <img src="https://www.chefspencil.com/wp-content/uploads/Sis-kebab-1.jpg.webp" alt=" Kebap" class="image1" style="width:100%"> 
+                              <div class="middle1">
+                                <div class="text1"> Kebap</div>
+                              </div></div><br>
+                            
+                            <div class="column">
+                              <img src="https://www.chefspencil.com/wp-content/uploads/Hamsi--960x526.jpg.webp" alt="Hamsi (anchovy)" class="image2"style="width:100%">
+                              <div class="middle2">
+                                <div class="text2">Hamsi (anchovy)</div>
+                              </div></div><br>
+                           
+                            <div class="column">
+                                <img src="https://www.chefspencil.com/wp-content/uploads/Karniyarik.jpg.webp" alt="Karnıyarık" class="image3" style="width:100%" >
+                                <div class="middle3">
+                                    <div class="text3">Karnıyarık</div>
+                                  </div></div>
+                            
+                            <div class="column">
+                              <img src="https://www.chefspencil.com/wp-content/uploads/Manti-.jpg.webp" alt="Mantı" class="image4"  style="width:100%">
+                              <div class="middle4">
+                                <div class="text4">Mantı </div>
+                              </div></div><br>
+                            
+                          </div>
+                            </article> <hr>
+                            <article class="post">
+                                <h3><i><b> ~FRENCH~ </b></i></h3>
+                                <small>Posted by Neha on July 13</small>
+                                <p>“Overall, the cooking ofFranceis the best in the Western World. And its classical and regional cuisines are superb”- Howard Hillman <br><br>
+                                    For many people, their introduction to French food comes in the shape of wine and cheese. From brie and Burgundy to camembert and Chardonnay, there are plenty of delicious pairings to choose from. But there’s a whole world of French cuisine beyond the cheeseboard. <br>
+                                    Little wonder then that a holiday in France is as much about marveling at its art, architecture as it is about savoring its fine food!</p>
+                               <center><img src="https://www.morethanshipping.com/wp-content/uploads/2012/08/9p-500x500.jpg" alt="this is French food" width="350px" height="350px"></center> <br>
+                               <p>
+                                The French truly love their food and, much like Italians, eating is a way of life. Traditional French food is revered for its simplicity. You are unlikely to find strong marinades and heavy spices that find pride of place in hearty Italian food or rich Southeast Asian curry dishes. Instead, there is an emphasis on butter and herbs; five simple yet technically specific mother sauces form the essence of French cuisine – béchamel, espagnole, hollandaise, tomato, and veloute – which use ingredients like butter, milk, meat stocks and tomato as their base. 
+<br>
+                                Braising, flambeing, sauteing, poaching and broiling are just some of the French cooking techniques that are now globally accepted. When it comes to eating out in France, you will be spoilt for choice – quaint cafes, as well as Michelin star restaurants, dot the culinary landscape in equal measure.
+                               </p>
+                               <center><h5><U><b>POPULAR DISHES</b>  </U></h5></center>
+                               <div class="row" >
+                                <div class="column">
+                                  <img src="https://www.expatica.com/app/uploads/sites/5/2014/05/french-onion-soup.jpg" alt="Soupe à l’oignon" class="image1" style="width:100%"> 
+                                  <div class="middle1">
+                                    <div class="text1">Soupe à l’oignon</div>
+                                  </div></div><br>
+                                
+                                
+                                <div class="column">
+                                  <img src="https://www.expatica.com/app/uploads/sites/5/2020/03/Coq-au-vin-1024x683.jpg" alt="Coq au vin" class="image2"style="width:100%">
+                                  <div class="middle2">
+                                    <div class="text2">Coq au vin</div>
+                                  </div></div><br>
+                               
+                                <div class="column">
+                                    <img src="https://www.expatica.com/app/uploads/sites/5/2014/05/cassoulet.jpg" alt="Cassoulet" class="image3" style="width:100%" >
+                                    <div class="middle3">
+                                        <div class="text3">Cassoulet</div>
+                                      </div></div>
+                                
+                                <div class="column">
+                                  <img src="https://www.expatica.com/app/uploads/sites/5/2020/03/Boeuf-bourguignon-1024x683.jpg" alt="Boeuf bourguignon" class="image4"  style="width:100%">
+                                  <div class="middle4">
+                                    <div class="text4">Boeuf bourguignon</div>
+                                  </div></div><br>
+                                
+                              </div>
+                                </article> <hr>
+                                <br>
+</div>
+
+<div class="row1">
+    <div class="column1" style="background-color:  rgb(233, 212, 120); height: auto;">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="https://www.cheatsheet.com/wp-content/uploads/2014/10/iStock_000000199153_Small.jpg" style="width:100%">
+              <div class="text"> <span style="background-color: rgb(212, 158, 57);">China: Jiaozi</span></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="https://www.cheatsheet.com/wp-content/uploads/2014/11/iStock_000017351202_Small.jpg" style="width:100%">
+              <div class="text"> <span style="background-color: rgb(241, 149, 88);">
+                  Costa Rica: Gallo Pinto</span></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="https://www.cheatsheet.com/wp-content/uploads/2015/11/Goulash-hungarian-beef-stew.jpg" style="width:100%">
+              <div class="text"> <span style="background-color: rgb(238, 155, 144);">Czech Republic: Goulash and Bread Dumplings</span></div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="https://www.cheatsheet.com/wp-content/uploads/2015/06/Vietnamese-beef-noodle-soup-called-pho.jpg" style="width:100%">
+                <div class="text"><span style="background-color: rgb(174, 188, 190);">Vietnam: Pho</span></div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="https://www.cheatsheet.com/wp-content/uploads/2014/09/iStock_000022531716_Small.jpg" style="width:100%">
+                <div class="text"><span style="background-color: rgb(215, 236, 167);">Germany: Jägerbraten mit Spätzle</span></div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="https://www.cheatsheet.com/wp-content/uploads/2015/02/Baked-chicken-with-chickpeas-and-vegetables.jpg" style="width:100%">
+                <div class="text"><span style="background-color: rgb(231, 241, 81);">Morocco: Tagine</span></div>
+              </div>
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              
+            </div>
+            
+            <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+      </div>
+    <div class="column1" style="background-color: rgb(247, 91, 64); height: auto;" ;>
+     <center>
+       <br><h5> <u> <b> BEST INTERNATIONAL FOODS YOU HAVE TO TRY</b></u></h5>
+      <p>
+      
+As much as you may like to, it isn’t always feasible to travel to Paris for its renowned croissants or India for its curry. Most foodies have to explore local restaurants to discover dishes and tastes from around the world. With so many people from other cultures around you, it isn’t hard to find home cooking that takes you to another world.
+<br><br>
+These must-try dishes are some of the most sought-after flavors in the world. Your job is to find a restaurant that sticks to the country’s traditional way of cooking so you can get the most authentic meal possible. If all else fails, give the dish a shot yourself. The Internet is brimming with genuine recipes from around the world.
+<h6> <u>To know more about dishes of restaurant in details </u>  </h6>
+<button class="btn btn-primary">Restaurant Name</button>
+<button class="btn btn-warning">Location</button>
+<br><br>
+      </p>
+      </center> 
+</div>
+</div>
+
+
+
+<div>
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="https://funcooking.co.uk/wp-content/uploads/2018/12/comfort-food-recipes.jpg" alt="Recipes" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">RECIPES</h5>
+            <p class="card-text">When you need to feed the family or kids, these are the easy dinner recipes you turn to time and time again. With lots of healthy, quick, vegetarian, chicken, and budget-friendly ideas, there’s something for everyone.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://pbs.twimg.com/profile_images/527443285271261184/cIgUIUGb_400x400.jpeg" alt="BLOGS" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">BLOGS</h5>
+            <p class="card-text"><h6>The Food Explorer</h6>
+                We explore the food blogosphere to find the best recipes!</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 25 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://jaxvegancouple.com/wp-content/uploads/2018/08/faq-1024x367.jpg" alt="FAQ" height="250px">
+          <div class="card-body">
+            <h5 class="card-title">FAQ</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+
+      
+</div>
+
+<div class="row" id="footer">
+    <div class="col"><br><h6>About Us </h6><div>
+        Contact me: XXXXXXXXXX <br> <br>email ID: abcexample@gmail.com <br><br>Location: <br>mnop,xxx, yyyyy </div></div>
+    <div class="col"><br><h6>Information</h6>How to reach us: <br> <a href="mailto:abcexample@gmail.com" class=email style="color: white; text-decoration:none; ">&#9993;Email me</a> <br>abcdef <br>defghi <br>jklmno<br> Website</div>
+    <div class="col"><br><h6>Subscribe Here</h6><a href="https://www.instagram.com" class="insta" style=" text-decoration:none; "><i class="bi bi-instagram" style="font: size 25px; color: purple;" > Instagram </i></a>  <br> <a href="https://www.facebook.com" class="fb"style=" text-decoration:none;" ><i class="bi bi-facebook" style="font: size 25px; color: rgb(28, 117, 201);" > Facebook</i></a>  <br> <a href="https://www.twitter.com" class="twitter" style=" text-decoration:none;"><i class="bi bi-twitter" style="font: size 25px; color: rgb(61, 104, 199);" >Twitter</i></a> <br>  <a href="https://www.youtube.com" class="yt" style=" text-decoration:none; "><i class="bi bi-youtube" style="font: size 25px; color: rgb(238, 10, 10);" > Youtube </i></a>  <br> <a href="https://www.linkedin.com" class="linkedin" style=" text-decoration:none; "><i class="bi bi-linkedin" style="font: size 25px; color: rgb(235, 211, 211);" > LinkedIn</i></a> <br>  <a href="#" class="share" style=" text-decoration:none; "><i class="bi bi-share" style="font-size: 15px; color: teal;"> Share </i></a></div>
+    <div class="col" id="letters"><br><h6>Newsletter</h6><br>
+    
+        <div class="newsletter" style="background-color:rgb(136, 131, 131)">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+          </div>
+        
+          <div class="newsletter">
+            <input type="submit" value="Subscribe">
+          </div>
+
+    <span style="font-size: 15px; color: #575757; line-height: 120%;
+        font-family: arial; text-decoration: none;">If you no longer want to receive our emails, please <a href="">un-subscribe here</a>.</span>
+        </div>
+    <hr><br>
+   <h6 style="text-align: center;">Blog Made By N.G. </h6>
+ <center>Copyright &copy; 2021, My Website</center>  
+ <br>
+ <br>
+  </div>
+        
+</body>
+</html>
