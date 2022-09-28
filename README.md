@@ -1,1 +1,1 @@
-# example
+# Food Blog Mini project 
